@@ -2,9 +2,16 @@
 I had to import REACT for being able to use JSX lenguage */
 
 import React from 'react';
+import { directive } from '@babel/types';
 
-const person = () => {
-    return <p>I'm a Person</p>
+const person = (props) => {
+    return(
+        <div>
+            <p>I'm {props.Name} and I'm {props.age} years old</p>
+            <p>{props.children}</p>
+        </div>
+        
+    )
 }
 
 export default person; //Exporting the function 
